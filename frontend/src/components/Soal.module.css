@@ -1,0 +1,307 @@
+/* Komponen soal: kartu soal, isian, satuan, pilihan ganda, langkah */
+
+.kartuSoal {
+  padding: 12px var(--s-2);
+  border-radius: var(--sudut);
+  background: var(--c-latar-2);
+  margin-bottom: var(--s-2);
+}
+
+.teksSoal {
+  line-height: 1.7;
+}
+
+.kata,
+.kataTanda {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.kataTanda {
+  background: var(--c-tanda);
+  box-shadow: inset 0 -2px 0 #d97706;
+}
+
+.barisTanda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-1);
+  margin-top: var(--s-1);
+}
+
+.petunjukKecil {
+  font-size: var(--fs-kecil);
+  color: var(--c-teks-2);
+}
+
+.tombolKecil {
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-aksen);
+  background: var(--c-latar);
+  color: var(--c-aksen);
+  font-weight: 700;
+  font-size: var(--fs-kecil);
+  white-space: nowrap;
+}
+
+/* Isian angka */
+.barisIsian {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: 6px 0;
+}
+
+.labelIsian {
+  font-size: var(--fs-kecil);
+  font-weight: 600;
+}
+
+.kotak {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input {
+  width: 8.5em;
+  height: 48px;
+  padding: 0 10px;
+  border: 2px solid var(--c-garis);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 20px;
+  text-align: right;
+}
+
+.input:focus {
+  border-color: var(--c-aksen);
+  outline: none;
+}
+
+.inputBenar {
+  border-color: var(--c-benar);
+  background: #f0fdf4;
+}
+
+.inputSalah {
+  border-color: var(--c-salah);
+}
+
+.imbuhan {
+  font-weight: 700;
+  color: var(--c-teks-2);
+}
+
+.centang {
+  color: var(--c-benar);
+  font-weight: 800;
+}
+
+/* Satuan */
+.satuan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.satuan > button {
+  min-width: 56px;
+  min-height: 44px;
+  border-radius: 10px;
+  border: 2px solid var(--c-garis);
+  background: var(--c-latar);
+  font-weight: 700;
+}
+
+.satuan > .satuanDipilih {
+  border-color: var(--c-aksen);
+  background: var(--c-aksen);
+  color: var(--c-aksen-teks);
+}
+
+/* Pilihan ganda */
+.pg {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tanya {
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.opsi {
+  min-height: var(--sentuh-min);
+  padding: 10px 14px;
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-garis);
+  background: var(--c-latar);
+  text-align: left;
+  font-size: var(--fs-isi);
+}
+
+.opsi:disabled {
+  cursor: default;
+  color: var(--c-teks);
+}
+
+.opsiBenar {
+  border-color: var(--c-benar);
+  background: #f0fdf4;
+  font-weight: 700;
+}
+
+.opsiSalah {
+  border-color: var(--c-salah);
+}
+
+.opsiDipilih {
+  border-color: var(--c-aksen);
+  background: #eff6ff;
+}
+
+.umpanBenar,
+.umpanSalah,
+.umpanInfo {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: var(--sudut);
+  font-size: var(--fs-kecil);
+}
+
+.umpanBenar {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.umpanSalah {
+  background: #fef2f2;
+  color: var(--c-teks);
+  border-left: 4px solid var(--c-salah);
+}
+
+.umpanInfo {
+  background: #eff6ff;
+  color: var(--c-teks);
+}
+
+/* Langkah penyelesaian */
+.langkah {
+  border: 2px solid var(--c-garis);
+  border-radius: var(--sudut);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.langkahAktif {
+  border-color: var(--c-aksen);
+}
+
+.langkahSelesai {
+  border-color: var(--c-benar);
+  background: #f0fdf4;
+}
+
+.judulLangkah {
+  font-size: var(--fs-isi);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ringkasLangkah {
+  font-size: var(--fs-kecil);
+}
+
+.barisAksi {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.barisAksi > :first-child {
+  flex: 1;
+}
+
+.petunjuk {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: var(--sudut);
+  background: #fffbeb;
+  border-left: 4px solid #d97706;
+  font-size: var(--fs-kecil);
+}
+
+.pilihBagian {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.gambarMini {
+  flex: 0 0 96px;
+  height: 120px;
+}
+
+.daftarCentang {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+}
+
+.centangBagian {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--sentuh-min);
+  padding: 0 12px;
+  border-radius: var(--sudut);
+  border: 2px solid var(--warna);
+  background: var(--c-latar);
+  font-weight: 700;
+  text-align: left;
+}
+
+.centangBagian[aria-checked='true'] {
+  background: var(--warna);
+  color: #fff;
+}
+
+.kotakCentang {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid currentColor;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.bintang {
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #f59e0b;
+  text-align: center;
+}
+
+.pembahasan {
+  padding: 12px var(--s-2);
+  border-radius: var(--sudut);
+  background: var(--c-latar-2);
+  margin: 10px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.pembahasan p + p {
+  margin-top: 4px;
+}

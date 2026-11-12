@@ -1,0 +1,115 @@
+/* Gaya bersama layar materi (M1–M3). Teks ≤ 40 kata per layar (docs/DESAIN.md §2.3). */
+.teks {
+  min-height: 3em;
+}
+
+.petunjuk {
+  color: var(--c-teks-2);
+  font-size: var(--fs-kecil);
+  margin-top: 4px;
+}
+
+.rumus {
+  margin-top: var(--s-1);
+  font-size: var(--fs-rumus);
+  font-weight: 700;
+  text-align: center;
+}
+
+.benar,
+.salah {
+  margin-top: var(--s-1);
+  font-weight: 700;
+}
+
+.benar {
+  color: var(--c-benar);
+}
+
+.salah {
+  color: var(--c-teks);
+}
+
+.kartuInfo {
+  margin-top: var(--s-1);
+  padding: var(--s-1) 12px;
+  border-radius: var(--sudut);
+  background: var(--c-latar-2);
+  font-size: var(--fs-kecil);
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  height: var(--sentuh-min);
+  accent-color: var(--c-aksen);
+}
+
+.labelSlider {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-kecil);
+  font-weight: 700;
+}
+
+.segmen {
+  display: flex;
+  gap: 6px;
+  margin: var(--s-1) 0;
+}
+
+.segmen > button {
+  flex: 1;
+  min-height: var(--sentuh-min);
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-aksen);
+  background: var(--c-latar);
+  color: var(--c-aksen);
+  font-weight: 700;
+  font-size: var(--fs-kecil);
+}
+
+.segmen > button[aria-pressed='true'] {
+  background: var(--c-aksen);
+  color: var(--c-aksen-teks);
+}
+
+.tombolPenuh {
+  width: 100%;
+  margin-top: var(--s-1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: var(--s-1);
+}
+
+.kartuLuas {
+  min-height: var(--sentuh-min);
+  padding: 6px 10px;
+  border-radius: var(--sudut);
+  border: 2px solid var(--warna, var(--c-garis));
+  background: var(--c-latar);
+  text-align: left;
+  font-size: var(--fs-kecil);
+}
+
+.kartuLuas strong {
+  display: block;
+  font-size: var(--fs-isi);
+}
+
+.kartuLuas[aria-pressed='true'] {
+  background: var(--c-latar-2);
+}
+
+.kartuTotal {
+  grid-column: 1 / -1;
+  --warna: var(--c-teks);
+}
+
+.redup {
+  opacity: 0.4;
+}

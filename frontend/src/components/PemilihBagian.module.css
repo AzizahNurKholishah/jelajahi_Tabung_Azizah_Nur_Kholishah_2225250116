@@ -1,0 +1,35 @@
+.baris {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--s-1);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--sentuh-min);
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 2px solid var(--warna);
+  background: var(--c-latar);
+  font-size: var(--fs-kecil);
+  font-weight: 700;
+}
+
+.titik {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--warna);
+}
+
+.dipilih {
+  background: var(--warna);
+  color: #fff;
+}
+
+.dipilih .titik {
+  background: #fff;
+}

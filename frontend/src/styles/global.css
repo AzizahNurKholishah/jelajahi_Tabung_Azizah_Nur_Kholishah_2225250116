@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-latar);
+  color: var(--c-teks);
+  font-family: var(--font);
+  font-size: var(--fs-isi);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100dvh;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: var(--c-aksen);
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-aksen);
+  outline-offset: 2px;
+}
+
+.tombol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  min-height: var(--tinggi-tombol);
+  min-width: var(--sentuh-min);
+  padding: 0 var(--s-2);
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-aksen);
+  background: var(--c-aksen);
+  color: var(--c-aksen-teks);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform var(--durasi);
+}
+
+.tombol:active {
+  transform: scale(0.98);
+}
+
+.tombol:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tombol--sekunder {
+  background: var(--c-latar);
+  color: var(--c-aksen);
+}
+
+/* Warna rumus = warna bagian tabung (pensinyalan) */
+.w-alas { color: var(--c-alas); font-weight: 700; }
+.w-tutup { color: var(--c-tutup); font-weight: 700; }
+.w-selimut { color: var(--c-selimut); font-weight: 700; }
+.w-jari { color: var(--c-jari); font-weight: 700; }
+.w-tinggi { color: var(--c-tinggi); font-weight: 700; }
+
+/* Label yang menempel pada objek 3D (drei <Html>) */
+.label-3d {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 2px solid;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

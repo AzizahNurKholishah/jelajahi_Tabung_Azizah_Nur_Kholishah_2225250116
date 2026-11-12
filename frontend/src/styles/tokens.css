@@ -1,0 +1,51 @@
+/* Token desain — docs/DESAIN.md §2.
+   Warna bagian tabung adalah KODE MAKNA: jangan dipakai untuk hal lain. */
+:root {
+  /* Bagian tabung */
+  --c-alas: #2563eb;
+  --c-tutup: #059669;
+  --c-selimut: #ea580c;
+  --c-jari: #db2777;
+  --c-tinggi: #7c3aed;
+
+  /* Teks & latar */
+  --c-teks: #1f2937;
+  --c-teks-2: #6b7280;
+  --c-latar: #ffffff;
+  --c-latar-2: #f3f4f6;
+  --c-garis: #d1d5db;
+  --c-tanda: #fef3c7; /* kata yang ditandai siswa pada soal cerita */
+
+  /* Umpan balik (selalu disertai ikon + teks) */
+  --c-benar: #16a34a;
+  --c-salah: #dc2626;
+
+  /* Aksi */
+  --c-aksen: #2563eb;
+  --c-aksen-teks: #ffffff;
+
+  /* Tipografi */
+  --font: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --fs-isi: 18px;
+  --fs-judul: 22px;
+  --fs-rumus: 22px;
+  --fs-kecil: 15px;
+
+  /* Jarak (kelipatan 8) & ukuran */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --tepi: 16px;
+  --sudut: 12px;
+  --sentuh-min: 48px;
+  --tinggi-tombol: 52px;
+
+  --durasi: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --durasi: 0ms;
+  }
+}

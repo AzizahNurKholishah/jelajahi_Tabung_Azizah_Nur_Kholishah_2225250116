@@ -1,0 +1,70 @@
+.layar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.atas {
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+  padding: var(--s-1) var(--tepi);
+  border-bottom: 1px solid var(--c-garis);
+}
+
+.kembali {
+  width: var(--sentuh-min);
+  height: var(--sentuh-min);
+  border: none;
+  background: none;
+  font-size: 24px;
+  border-radius: var(--sudut);
+}
+
+.judul {
+  flex: 1;
+  font-size: var(--fs-judul);
+  font-weight: 700;
+}
+
+.posisi {
+  color: var(--c-teks-2);
+  font-size: var(--fs-kecil);
+}
+
+.visual {
+  flex: 0 0 50dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-latar-2);
+}
+
+.visualKecil {
+  flex-basis: 26dvh;
+  padding: var(--s-1);
+}
+
+.visual > * {
+  width: 100%;
+  height: 100%;
+}
+
+.isi {
+  flex: 1;
+  padding: var(--s-2) var(--tepi);
+}
+
+.aksi {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: var(--s-1);
+  padding: var(--s-1) var(--tepi) calc(var(--s-2) + env(safe-area-inset-bottom));
+  background: var(--c-latar);
+  border-top: 1px solid var(--c-garis);
+}
+
+.aksi > * {
+  flex: 1;
+}

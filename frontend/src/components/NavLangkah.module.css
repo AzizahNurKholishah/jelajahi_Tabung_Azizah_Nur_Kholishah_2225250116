@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.titik {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.titik span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-garis);
+}
+
+.titik .penuh {
+  background: var(--c-aksen);
+}
+
+.tombol {
+  display: flex;
+  gap: var(--s-1);
+}
+
+.tombol > * {
+  flex: 1;
+  padding: 0 var(--s-1);
+}

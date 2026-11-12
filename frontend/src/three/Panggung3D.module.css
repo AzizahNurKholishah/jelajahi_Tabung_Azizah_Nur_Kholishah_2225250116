@@ -1,0 +1,22 @@
+.wadah {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.kanvas {
+  touch-action: none;
+}
+
+.reset {
+  position: absolute;
+  right: var(--s-1);
+  bottom: var(--s-1);
+  width: var(--sentuh-min);
+  height: var(--sentuh-min);
+  border-radius: 50%;
+  border: 2px solid var(--c-garis);
+  background: var(--c-latar);
+  font-size: 22px;
+  line-height: 1;
+}

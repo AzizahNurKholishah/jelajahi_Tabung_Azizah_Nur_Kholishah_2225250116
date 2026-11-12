@@ -1,0 +1,26 @@
+.wadah {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.memuat {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--c-teks-2);
+}
+
+.sakelar {
+  position: absolute;
+  left: var(--s-1);
+  bottom: var(--s-1);
+  min-width: var(--sentuh-min);
+  height: var(--sentuh-min);
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-garis);
+  background: var(--c-latar);
+  font-weight: 700;
+  font-size: var(--fs-kecil);
+}

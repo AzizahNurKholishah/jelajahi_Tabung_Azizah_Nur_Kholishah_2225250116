@@ -1,0 +1,72 @@
+.pengantar {
+  margin-bottom: var(--s-2);
+}
+
+.daftarLevel {
+  list-style: none;
+  margin: 0 0 var(--s-2);
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.kartuLevel {
+  display: flex;
+  gap: var(--s-2);
+  align-items: center;
+  padding: 12px var(--s-2);
+  border-radius: var(--sudut);
+  border: 2px solid var(--c-aksen);
+  background: var(--c-latar);
+  color: var(--c-teks);
+  text-decoration: none;
+}
+
+.terkunci {
+  border-color: var(--c-garis);
+  color: var(--c-teks-2);
+}
+
+.nomorLevel {
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--c-latar-2);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.infoLevel {
+  display: grid;
+  gap: 2px;
+  font-size: var(--fs-kecil);
+}
+
+.infoLevel strong {
+  font-size: var(--fs-isi);
+}
+
+.statLevel {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.penuh {
+  display: flex;
+  width: 100%;
+}
+
+.tampilSemua {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: var(--fs-kecil);
+}
+
+.tampilSemua input {
+  width: 22px;
+  height: 22px;
+}
