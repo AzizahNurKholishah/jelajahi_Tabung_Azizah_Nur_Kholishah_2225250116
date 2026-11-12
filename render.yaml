@@ -1,0 +1,20 @@
+# Blueprint Render untuk backend Python (FastAPI).
+# Render → New → Blueprint → pilih repositori ini. Database memakai Neon (PostgreSQL gratis, data tidak hilang).
+services:
+  - type: web
+    name: jelajah-tabung-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DATABASE_URL # tempel connection string dari Neon saat diminta
+        sync: false
+      - key: PENELITI_TOKEN # dibuat acak oleh Render; lihat di tab Environment
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://azizahnurkholishah.github.io,http://localhost:5173

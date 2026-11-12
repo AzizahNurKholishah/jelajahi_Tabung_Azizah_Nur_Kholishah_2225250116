@@ -64,6 +64,19 @@ cd backend;  pytest          # pytest: log batch, token peneliti, ringkasan, eks
 3. Log tersimpan dulu di HP dan dikirim otomatis ke backend saat online.
 4. Ambil data: `GET /api/peneliti/ringkasan` dan `GET /api/peneliti/export.csv` dengan header `X-Peneliti-Token` (isi dari `backend/.env`). Bisa dicoba di http://localhost:8000/docs.
 
+## Memasang backend Python secara online (agar log peneliti terkirim)
+GitHub Pages hanya menjalankan frontend. Backend dipasang di **Render** (gratis) dengan database **Neon** (PostgreSQL gratis, data tidak hilang).
+
+1. **Neon** — daftar di https://neon.tech (bisa pakai akun GitHub) → buat project → salin *connection string* (`postgresql://…?sslmode=require`).
+2. **Render** — daftar di https://render.com (pakai akun GitHub) → **New → Blueprint** → pilih repositori ini → Render membaca `render.yaml`.
+   Saat diminta, tempel connection string Neon ke `DATABASE_URL` → **Apply**. Tunggu sampai status *Live*.
+   Catat alamatnya, mis. `https://jelajah-tabung-api.onrender.com`, dan nilai `PENELITI_TOKEN` (tab *Environment*).
+3. **GitHub** — repositori ini → **Settings → Secrets and variables → Actions → tab Variables → New repository variable**:
+   nama `VITE_API_URL`, nilai `https://<alamat-render>/api`. Lalu **Actions → Deploy ke GitHub Pages → Run workflow**.
+4. Cek: buka `https://<alamat-render>/api/health` → harus `{"status":"ok",…}`.
+
+Catatan: server gratis Render "tidur" setelah 15 menit tanpa akses; permintaan pertama butuh ±50 detik. Aplikasi menunggu hingga 30 detik dan mencoba lagi otomatis, jadi log tidak hilang.
+
 ## Ikon PWA
 ```powershell
 cd frontend; py scripts/buat_ikon.py   # membuat public/icons/*.png

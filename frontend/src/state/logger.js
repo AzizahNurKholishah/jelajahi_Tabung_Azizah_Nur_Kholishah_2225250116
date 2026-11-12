@@ -67,7 +67,8 @@ export async function kirimAntrean() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ events: batch.map(keServer) }),
-        signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined,
+        // 30 detik: server gratis (Render) butuh ±30–50 detik untuk "bangun" setelah tidur.
+        signal: AbortSignal.timeout ? AbortSignal.timeout(30000) : undefined,
       });
       if (!res.ok) {
         galat = `server ${res.status}`;

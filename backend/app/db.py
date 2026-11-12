@@ -9,9 +9,11 @@ from app.config import get_settings
 
 @lru_cache
 def get_engine() -> Engine:
-    url = get_settings().database_url
-    connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
-    return create_engine(url, connect_args=connect_args)
+    url = get_settings().url_database
+    if url.startswith("sqlite"):
+        return create_engine(url, connect_args={"check_same_thread": False})
+    # PostgreSQL (Neon): koneksi bisa diputus saat database idle → cek dulu sebelum dipakai.
+    return create_engine(url, pool_pre_ping=True, pool_recycle=300)
 
 
 def buat_tabel(engine: Engine | None = None) -> None:

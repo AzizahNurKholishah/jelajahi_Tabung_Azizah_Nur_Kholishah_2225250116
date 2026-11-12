@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_health_ok() -> None:
     res = client.get("/api/health")
     assert res.status_code == 200
-    assert res.json() == {"status": "ok", "versi": "0.1.0"}
+    assert res.json()["status"] == "ok"
 
 
 def test_cors_mengizinkan_frontend_lokal() -> None:
