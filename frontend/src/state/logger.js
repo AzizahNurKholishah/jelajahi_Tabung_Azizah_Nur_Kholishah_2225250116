@@ -7,7 +7,7 @@ const ANTREAN = 'jelajahTabung.antreanLog';
 const RIWAYAT = 'jelajahTabung.riwayatLog'; // salinan lokal untuk ekspor JSON cadangan
 const MAKS = 5000;
 const UKURAN_BATCH = 100;
-const API = import.meta.env.VITE_API_URL ?? '/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 
 /** UUID v4. crypto.randomUUID hanya ada di konteks aman (HTTPS/localhost), jadi sediakan cadangan. */
 export function buatId() {

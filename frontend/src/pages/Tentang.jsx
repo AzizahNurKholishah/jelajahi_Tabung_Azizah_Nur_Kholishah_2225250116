@@ -6,7 +6,8 @@ import sc from '../components/Soal.module.css';
 import css from './materi.module.css';
 
 // Tentang + Mode Peneliti (F12, FR-11). Kode siswa diisi peneliti setelah ada persetujuan.
-const PIN = import.meta.env.VITE_PIN_PENELITI ?? '2026';
+// `||` (bukan `??`): bila variabel diset kosong saat build, PIN kosong tidak boleh diterima.
+const PIN = import.meta.env.VITE_PIN_PENELITI || '2026';
 const POLA_KODE = /^S\d{2,3}$/;
 const POLA_KELAS = /^[A-Za-z0-9-]{0,20}$/;
 

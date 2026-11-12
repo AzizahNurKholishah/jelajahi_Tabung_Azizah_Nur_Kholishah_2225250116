@@ -7,6 +7,9 @@ Aplikasi web (PWA, *mobile-first* untuk Android) untuk membantu siswa SMP kelas 
 
 Dikembangkan dengan model ADDIE oleh Azizah Nur Kholishah (2225250116), Pendidikan Matematika.
 
+**Buka aplikasi:** https://azizahnurkholishah.github.io/jelajahi_Tabung_Azizah_Nur_Kholishah_2225250116/
+(dipasang otomatis oleh GitHub Actions setiap ada push ke `main`; lihat `.github/workflows/deploy-pages.yml`)
+
 ## Isi aplikasi
 | Modul | Isi |
 |---|---|
